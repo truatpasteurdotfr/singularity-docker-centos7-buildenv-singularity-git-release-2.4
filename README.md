@@ -5,7 +5,8 @@ example Dockerfile provided for convenience.
 
 Running without installation:
 ```
-singularity run shub://truatpasteurdotfr/singularity-docker-centos7-buildenv-singularity-git-release-2.4
+export OUT=`mktemp -d` && echo building in ${OUT} && \
+singularity run -H `mktemp -d`  shub://truatpasteurdotfr/singularity-docker-centos7-buildenv-singularity-git-release-2.4
 ```
 Building:
 ```
